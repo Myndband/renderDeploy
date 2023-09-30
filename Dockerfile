@@ -6,6 +6,8 @@ WORKDIR /app
 # Copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore
+RUN dotnet tool install -g Microsoft.dotnet-httprepl
+RUN dotnet dev-certs https --trust
 
 # Copy everything else and build
 COPY . ./
