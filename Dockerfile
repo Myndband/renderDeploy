@@ -17,7 +17,7 @@ RUN apk --no-cache add curl
 COPY --from=build-env /app/out .
 #EXPOSE 8090
 #ENTRYPOINT ["dotnet", "renderDotnetCore.dll"]
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet renderDotnetCore.dll
+CMD ASPNETCORE_URLS=https://localhost:7203 dotnet renderDotnetCore.dll
 
 # Build
 #FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
