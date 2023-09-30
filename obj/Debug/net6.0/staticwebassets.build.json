@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FxAngMULi7e2c/GX9Wb9NrX8c5nQNwcIsnqJqF625yM=",
+  "Source": "renderDotnetCore",
+  "BasePath": "_content/renderDotnetCore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
