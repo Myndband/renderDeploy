@@ -16,4 +16,4 @@ WORKDIR /app
 RUN apk --no-cache add curl
 COPY --from=build-env /app/out .
 EXPOSE 8090
-ENTRYPOINT ["dotnet", "dotnet-core-web-api.dll"]
+ENTRYPOINT ["dotnet", "renderDotnetCore.dll"]
