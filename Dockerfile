@@ -1,5 +1,5 @@
 # Author: Shilratna Dharmarakshak Chawhan
-#FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine-amd64 AS build-env
+#FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine-amd64 AS build
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
@@ -16,7 +16,7 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 #RUN apk --no-cache add curl
-COPY --from=build-env /app/out .
+COPY --from=build /app/out .
 EXPOSE 7203
 #ENTRYPOINT ["dotnet", "renderDotnetCore.dll"]
 #CMD ASPNETCORE_URLS=https://*:$PORT dotnet renderDotnetCore.dll
