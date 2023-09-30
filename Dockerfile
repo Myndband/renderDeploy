@@ -17,7 +17,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 #RUN apk --no-cache add curl
 COPY --from=build /app/out .
-EXPOSE 5066
+EXPOSE 5066 
 #ENTRYPOINT ["dotnet", "renderDotnetCore.dll"]
 #CMD ASPNETCORE_URLS=http://*:$PORT dotnet renderDotnetCore.dll
 ENV ASPNETCORE_URLS=http://*:$PORT
